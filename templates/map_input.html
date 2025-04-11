@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map Input - Delivery Route Optimization</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div class="wave">
+            <img src="/static/assets/bg.png" alt="">
+        </div>
+    <header>
+        <div class="hero">
+          <h1>TSP S<img src="/static/assets/compass-rose-north-arrow-clip-art-建筑logo-13c33928f588794ddcd83b5ca298becf.png" alt="O" style="width: 70px;height: 70px;">LVER </h1>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="locationSearch" placeholder=" Search for a location...">
+        <button id="searchButton">Search & Pin</button>
+    </div>
+    
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+    <div class="buttns">
+       <button id="calculate-tsp">Calculate Optimized Route</button>
+       <button id="calculate-tsp-time">Calculate Optimized Route based on Time</button>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="/static/js/scripts.js"></script>
+
+    <div id="loading-screen">
+        <div class="dots">
+            <div class="d1"></div>
+            <div class="d2"></div>
+            <div class="d3"></div>
+            <div class="d4"></div>
+            
+        </div>
+        <h1>Please Wait For Your Route To Be Optimized..</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/homepage.css"> 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="wave">
+            <img src="/static/assets/bg.png" alt="" draggable="false">
+        </div>
+
+        <nav>
+            <ul>
+                <!--<li><a href="#">Home</a></li>
+                <li><a href="#">Report</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">About</a></li> -->
+            </ul>
+            <img src="/static/assets/logo.png" alt="" style="width:55px; height:55px; box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);">
+        </nav>
+        
+        <div class="main-content">
+            <div class="main-text">
+                <h1>Big Basket Delivery</h1>
+                <p>Simplify Truck Management, Optimize Routes, And Achieve Faster And Efficient Deliveries.</p>
+                <a id="upload-matrix-btn" href="{{url_for('map_input')}}"><button>Enter Cost Matrix</button></a>
+            </div>
+        </div>
+        
+        <div class="right">
+            <div class="truck"><img src="/static/assets/—Pngtree—cargo truck with driver on_15825273.png" alt="">
+            </div>  
+            <!-- <div class="box">
+                
+                <div class="inner-box total-trucks" style="align-self: flex-start;">
+                    <h3>Total Trucks</h3>
+                    <p class="counter" data-count="500"> 0</p>
+
+                </div>
+            </div>
+           
+                
+                <div class="inner-box optimized-routes" style="align-self: flex-end;" style="align-self: center;">
+                    <h3>Optimized Routes</h3>
+                    <p class="counter" data-count="5000"> 0</p>
+
+                </div>
+            </div>
+            <div class="box">
+                
+                <div class="inner-box estimated-savings" style="align-self:flex-start;">
+                    <h3>Estimated Savings</h3>
+                    <p class="counter" data-count="50000"> ₹0</p>     -->
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+  <script src="/static/js/dashboard.js"></script>
+  <script>
+    $(document).ready(function () {
+        $('.counter').each(function () {
+            let $this = $(this);
+            let targetCount = parseInt($this.attr('data-count'));
+    
+            $({ countNum: 0 }).animate({ countNum: targetCount }, {
+                duration: 3000, 
+                easing: 'swing',
+                step: function () {
+                    $this.text(Math.floor(this.countNum)); 
+                },
+                complete: function () {
+                    $this.text(this.countNum); 
+                }
+            });
+        });
+    });
+    
+  </script>
+</html>
